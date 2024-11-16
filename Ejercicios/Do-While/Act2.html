@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const menu = {
+            1: { nombre: "Hamburguesa", precio: 10000.00 },
+            2: { nombre: "Papas Fritas", precio: 2000.50 },
+            3: { nombre: "Hot Dog", precio: 4000.00 },
+            4: { nombre: "Refresco", precio: 1500.50 },
+            5: { nombre: "Helado", precio: 2500.00 }
+        };
+
+        let total = 0;
+        let opc;
+
+        console.log("Bienvenido a Cpmida Rapida JS");
+        console.log("Menú:");
+        for (let key in menu) {
+            console.log(`${key}. ${menu[key].nombre} - $${menu[key].precio.toFixed(2)}`);
+        }
+
+        do {
+            opc = parseInt(prompt("Elige una opción del menú (1-5) o ingresa 0 para finalizar:"));
+
+            if (opc >= 1 && opc <= 5) {
+                total += menu[opc].precio;
+                console.log(`Has agregado ${menu[opc].nombre} - $${menu[opc].precio.toFixed(2)} a tu pedido.`);
+            } else if (opcion !== 0) {
+                console.log("Por favor, elige una de las opciones del menú.");
+            }
+
+        } while (opc !== 0);
+
+        console.log(`El costo total es: $${total.toFixed(2)}`);
+        console.log("¡Gracias por tu compra! Esperamos que disfrutes tu comida.");
+    </script>
+</body>
+</html>

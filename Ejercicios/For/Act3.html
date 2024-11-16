@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numeroInicio = parseInt(prompt("Ingresa el número de inicio del rango:"));
+
+        let numeroFinal = parseInt(prompt("Ingresa el número final del rango:"));
+
+        if (!isNaN(numeroInicio) && !isNaN(numeroFinal) && numeroInicio <= numeroFinal) {
+            let sumatoria = 0;
+            let cantidadNumeros = 0;
+
+            for (let i = numeroInicio; i <= numeroFinal; i++) {
+                sumatoria += i;
+                cantidadNumeros++;10
+                console.log(sumatoria10)
+            }
+
+            let promedio = sumatoria / cantidadNumeros;
+
+            console.log(`La sumatoria de los números entre ${numeroInicio} y ${numeroFinal} es: ${sumatoria}`);
+            console.log(`El promedio de los números entre ${numeroInicio} y ${numeroFinal} es: ${promedio}`);
+        } else {
+            console.log("Por favor, ingresa un rango válido (números válidos y el inicio debe ser menor o igual al final).");
+        }
+    </script>
+</body>
+</html>

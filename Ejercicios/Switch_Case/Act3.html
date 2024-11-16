@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let puntosEquipo = 0;
+
+        let resultado = prompt("Ingresa el resultado del partido (ganado, perdido, empatado):").toLowerCase();
+
+        if (resultado === "ganado") {
+            puntosEquipo += 3;
+            console.log("¡Victoria! 3 puntos añadidos.");
+        } else if (resultado === "empatado") {
+            puntosEquipo += 1;
+            console.log("Empate. 1 punto añadido.");
+        } else if (resultado === "perdido") {
+            console.log("Derrota. 0 puntos añadidos.");
+        } else {
+            console.log("Resultado no válido. Ingresa 'ganado', 'perdido' o 'empatado'.");
+        }
+
+        console.log("Clasificación actual:");
+        console.log("Puntos del equipo: " + puntosEquipo);
+    </script>
+</body>
+</html>

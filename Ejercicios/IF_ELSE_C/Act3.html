@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let montoCompra = parseFloat(prompt("Ingresa el monto total de tu compra:"));
+        let descuento = 0;
+
+        if (montoCompra >= 1000) {
+            descuento = montoCompra * 0.10; 
+        } else if (montoCompra >= 500) {
+            descuento = montoCompra * 0.05;
+        }
+
+        let totalConDescuento = montoCompra - descuento;
+
+        console.log("El total con el descuento aplicado es: " + totalConDescuento.toFixed(2)); //toFixed es para que el resultado se muestre 2 decimales
+    </script>
+</body>
+</html>

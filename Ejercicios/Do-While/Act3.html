@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sumaResult = 0;
+        let cantidadResult = 0;
+        let continuar;
+
+        do {
+            let resultado = parseFloat(prompt("Ingresa el resultado del examen (entre 0 y 100):"));
+
+            if (resultado >= 0 && resultado <= 100) {
+                sumaResult += resultado; 
+                cantidadResult++; 
+            } else {
+                console.log("Por favor, ingresa un resultado entre 0 y 100.");
+            }
+
+            continuar = prompt("¿Deseas ingresar otro resultado? (sí/no):").toLowerCase();
+
+        } while (continuar === "sí" || continuar === "si");
+
+        if (cantidadResult > 0) {
+            let promedio = sumaResult / cantidadResult;
+
+            console.log(`El promedio de tus resultados es: ${promedio.toFixed(2)}`);
+
+            if (promedio >= 60) {
+                console.log("¡Felicidades! Has aprobado.");
+            } else {
+                console.log("No aprobado. Suerte");
+            }
+        } else {
+            console.log("No ingresaste ningún resultado coherente.");
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const precioA = 50; 
+        const precioV = 100;
+        const precioE = 200; 
+
+        let tipoProducto = prompt("Ingresa el tipo de producto (A para Alimentos, V para Vestimenta, E para Electrónicos):").toUpperCase();
+
+        if (tipoProducto === "A" || tipoProducto === "V" || tipoProducto === "E") {  
+
+            let cantidadUnidades = parseInt(prompt("Ingresa la cantidad de unidades:"));
+
+            if (cantidadUnidades > 0) {
+                let precioBase = 0;
+                let descuento = 0;
+
+                switch (tipoProducto) {
+                    case "A":
+                        precioBase = precioA;
+                        descuento = 0.10; 
+                        break;
+                    case "V":
+                        precioBase = precioV;
+                        descuento = 0.05; 
+                        break;
+                    case "E":
+                        precioBase = precioE;
+                        descuento = 0; 
+                        break;
+                    default:
+                        console.log("Tipo de producto no válido.");
+                        break;
+                }
+
+                if (precioBase > 0) {
+                    let costoSinDescuento = precioBase * cantidadUnidades;
+
+                    let montoDescuento = costoSinDescuento * descuento;
+
+                    let costoConDescuento = costoSinDescuento - montoDescuento;
+
+                    console.log("Costo sin descuento: $" + costoSinDescuento.toFixed(2));
+                    console.log("Costo con descuento: $" + costoConDescuento.toFixed(2));
+                }
+
+            } else {
+                console.log("La cantidad de unidades debe ser un número positivo.");
+            }
+        } else {
+            console.log("Error: El tipo de producto debe ser A, V o E.");
+        }
+    </script>
+</body>
+</html>

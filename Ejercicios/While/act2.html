@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let numero = parseInt(prompt("Ingrese un numero entero positivo para iniciar la cuenta regresiva:"));
+
+        if (isNaN(numero) || numero < 0) {
+        console.log("Por favor, ingrese un numero entero positivo válido.");
+        } else {
+        while (numero >= 0) {
+            console.log(numero);
+            numero--;
+        }
+
+        console.log("¡Tiempo Agotado!");
+        }
+    </script>
+</body>
+</html>

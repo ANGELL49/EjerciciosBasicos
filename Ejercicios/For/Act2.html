@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let edad = parseInt(prompt("Ingresa tu edad:"));
+
+        if (!isNaN(edad) && edad > 0) {
+            console.log("Has cumplido los siguientes años:");
+            
+            for (let i = 1; i <= edad; i++) {
+                console.log(i);
+            }
+        } else {
+            console.log("Por favor, ingresa una edad válida.");
+        }
+    </script>
+</body>
+</html>

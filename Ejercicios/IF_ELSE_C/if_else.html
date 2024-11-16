@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var NombreCliente=" ";
+        NombreCliente=prompt("Digite el nombre del cliente: ");
+        var EdadCliente=prompt("digite la edad del cliente: ");
+
+        if (EdadCliente<18){
+            console.log("El cliente: "+ NombreCliente + "es menor de edad. ");
+        } else {
+            console.log("El cliente: "+ NombreCliente + "es mayor de edad. ")
+        }
+        //condicional anidado
+        if (EdadCliente<=0){
+            console.log("La edad del cliente no existe. ");
+        }else if (EdadCliente>100){
+            console.log("La edad del cliente es superior de lo normal");
+        } else {
+            console.log("Esta digitando una cadena de texto");
+        }
+
+
+    </script>
+</body>
+</html>

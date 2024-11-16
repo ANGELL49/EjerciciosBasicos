@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let papel = 40;
+
+        console.log(`La impresora tiene ${papel} páginas disponibles.`);
+
+        while (papel > 0) {
+            let paginasAImprimir = parseInt(prompt(`¿Cuántas páginas deseas imprimir? (Disponible: ${papel})`));
+
+            if (isNaN(paginasAImprimir) || paginasAImprimir <= 0) {
+                console.log("Por favor, introduce un número válido.");
+                continue; 
+            }
+
+            if (paginasAImprimir <= papel) {
+                papel -= paginasAImprimir; 
+                console.log(`Se han impreso ${paginasAImprimir} páginas. Quedan ${papel} páginas disponibles.`);
+            } else {
+                console.log(`Papel insuficiente para imprimir ${paginasAImprimir} páginas. Solo quedan ${papel} páginas disponibles.`);
+            }
+
+            if (papel === 0) {
+                console.log("Ya no hay papel.");
+            }
+        }
+
+        console.log("Fin del programa.");
+    </script>
+</body>
+</html>
